@@ -1,6 +1,6 @@
 # Beershop
 
-This project is a proof of concept of an API designed to handle orders, focused on keeping consistency of stock levels of the warehouse.
+This project is a proof of concept of an API designed to handle orders, focused on keeping consistency of stock levels in the warehouse.
 
 The dataset is a list of 200 beers, which includes details about name, style, description and can be found [here](https://www.kaggle.com/datasets/ruthgn/beer-profile-and-ratings-data-set) (the dataset has been reduced from 3197 to 200 for sake of simplicity, and the reduced version can be found in folder `example`).
 
@@ -19,7 +19,7 @@ The deamon is designed to handle all the orders sequentially, to avoid the case 
 
 The deamon is based on the combined use of a `capped` collection and a `tailable` cursor of MongoDB:
 - A `capped` collection is a collection where documents are stored sequentially and they can only be inserted.
-- A `tailable` cursor is a cursor that can be listened to like the `tail -f` utility command usually on linux.
+- A `tailable` cursor is a cursor that can be listened to like the `tail -f` utility command usually available on linux.
 
 Every order is added in the queue of orders and processed one by one.
 
@@ -29,7 +29,7 @@ Every order is added in the queue of orders and processed one by one.
 - Possibility to create, modify, and delete orders.
 - Automatic management of stock levels.
 - Visualization of orders with search based on id and creation time.
-- Possibility to order a flexibile quantity of an item.
+- Possibility to order a flexible quantity of an item.
 - Indication of the status of the order (`processing`, `confirmed`, etc)
 
 ## Current limitations
@@ -68,7 +68,7 @@ pip install .
 
 ## Configuration
 
-The application is configured thought a configuration file written in yaml format, that must be provided in the following way:
+The application is configured throught a configuration file written in yaml format, that must be provided in the following way:
 - Through the flag `-config` when starting the application from CMD or the enviroment variable `BEERSHOP_CONFIG`. (the priority is the command line argument first, than the environment variable).
 - Through the environment variable only when deployed with an WSGI HTTP server (e.g `gunicorn`).
 
@@ -91,7 +91,7 @@ where:
 
 The package provides two CMD entry points that are mandatory to be executed to run the application:
 - `beershop-configure`: configure the collection necessary for the queue handler deamon to process orders.
-- `beershop-initializetestdb`: initialized the DB with the database.
+- `beershop-initializetestdb`: initialized the DB with the dataset.
 
 These two commands are available once the package is installed:
 
@@ -135,7 +135,7 @@ options:
 
 The backend and the queue handler deamon must be run independently:
 - `beershop-start -h` to start the backend.
-- `beershop-start-queuehandler` to start the queue handler.
+- `beershop-start-queuehandler -h` to start the queue handler.
 
 ## Dataset
 
