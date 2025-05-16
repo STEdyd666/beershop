@@ -1,0 +1,80 @@
+[
+  {
+    "id": "0001",
+    "last_update": {
+        "$date": "2025-05-15T21:35:55.347Z"
+    },
+    "creation_time": {
+        "$date": "2025-05-15T21:35:55.347Z"
+    },
+    "instock": 13,
+    "limitoutofstock": 3,
+    "content": {
+        "Name": "Amber",
+        "Style": "altbier",
+        "Brewery": "Alaskan Brewing Co.",
+        "Beer Name (Full)": "Alaskan Brewing Co. Alaskan Amber",
+        "Description": "Notes:Richly malty and long on the palate, with just enough hop backing to make this beautiful amber colored \"alt\" style beer notably well balanced.\\t",
+        "ABV": 5.3,
+        "Min IBU": 25,
+        "Max IBU": 50,
+        "Astringency": 13,
+        "Body": 32,
+        "Alcohol": 9,
+        "Bitter": 47,
+        "Sweet": 74,
+        "Sour": 33,
+        "Salty": 0,
+        "Fruits": 33,
+        "Hoppy": 57,
+        "Spices": 8,
+        "Malty": 111,
+        "review_aroma": 3.498994,
+        "review_appearance": 3.636821,
+        "review_palate": 3.556338,
+        "review_taste": 3.643863,
+        "review_overall": 3.847082,
+        "number_of_reviews": 497
+    },
+    "unitprice": 3
+  },
+	{
+		"id": "0002",
+		"last_update": {
+			"$date": "2025-05-15T21:35:55.347Z"
+		},
+		"creation_time": {
+			"$date": "2025-05-15T21:35:55.347Z"
+		},
+		"instock": 21,
+		"limitoutofstock": 3,
+		"content": {
+			"Name": "Ishmael",
+			"Style": "altbier",
+			"Brewery": "Rising Tide Brewing Company",
+			"Beer Name (Full)": "Rising Tide Brewing Company Ishmael",
+			"Description": "Notes:Ishmael is our richly-flavored American copper ale. This American interpretation of the altbiers of Düsseldorf is brewed with continental Munich malt, American-grown hops, and a clean-fermenting ale yeast to produce a slightly sweet and malty beer balanced by a firm bitterness.\\t",
+			"ABV": 4.9,
+			"Min IBU": 25,
+			"Max IBU": 50,
+			"Astringency": 17,
+			"Body": 41,
+			"Alcohol": 1,
+			"Bitter": 55,
+			"Sweet": 43,
+			"Sour": 18,
+			"Salty": 1,
+			"Fruits": 20,
+			"Hoppy": 80,
+			"Spices": 7,
+			"Malty": 103,
+			"review_aroma": 3.528571,
+			"review_appearance": 3.914286,
+			"review_palate": 3.814286,
+			"review_taste": 3.914286,
+			"review_overall": 3.9,
+			"number_of_reviews": 35
+		},
+		"unitprice": 3
+	}
+]

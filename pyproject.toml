@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beershop"
+authors = [
+    {name = "Stefano Gianbattista Fanizzi", email = "ste.fanizzi@outlook.com"},
+]
+description = "Web application to manage a beer shop"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["one", "two"]
+license = "BSD-3-Clause"
+classifiers = [ 
+    "Framework :: Flask",
+    "Development Status :: 1 - Development",
+    "Environment :: Web Environment",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "flask",
+    "pymongo",
+    "future",
+    "pyyaml",
+    "pandas"
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.dynamic]
+version = {attr = "beershop.__version__"}
+
+[project.scripts]
+beershop-configure = "beershop.tools.cmd:configure"
+beershop-start = "beershop.tools.cmd:start"
+beershop-initializetestdb = "beershop.tools.cmd:initialize_testdb"
+beershop-start-queuehandler = "beershop.tools.cmd:start_queuehandler"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-mongodb"
+]
+
+[tool.pytest.ini_options]
+    mongodb_engine = "pymongo"
+    mongodb_host = "mongodb://127.0.0.1:27017"
+    mongodb_dbname = "beershop-test"
+    mongodb_fixture_dir = "tests/collections"

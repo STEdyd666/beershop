@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('home_bp.static', filename='css/home.css')}}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/themes/prism.min.css" rel="stylesheet" />
+    <title>BeerShop</title>
+  </head>
+  <body>
+    <div class="main">
+      <md-block 
+        src="{{ url_for('home_bp.static', filename='md/README.md') }}"
+        class="content"
+      >
+    </div>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  </body>
+</html>

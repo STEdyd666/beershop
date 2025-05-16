@@ -1,0 +1,3 @@
+include src/beershop/home/static/md/*
+include src/beershop/home/templates/*
+include src/beershop/home/static/css/*
