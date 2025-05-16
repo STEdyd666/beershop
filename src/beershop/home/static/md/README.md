@@ -25,7 +25,7 @@ Every order is added in the queue of orders and processed one by one.
 
 ## Features
 
-- Retrival of list of items (beers) with search based on name, style and description.
+- Retrieval of list of items (beers) with search based on name, style and description.
 - Possibility to create, modify, and delete orders.
 - Automatic management of stock levels.
 - Visualization of orders with search based on id and creation time.
@@ -41,7 +41,7 @@ Every order is added in the queue of orders and processed one by one.
     - `processing`: state of the order before the final check on stock level.
     - `confirmed`: state of the order when the stock level has been checked and the availability of the item confirmed (ideally before the payment).
 - No payment step. (this include the case of a failed payment).
-- The search in limited on a text search based on exact name, style that may be present on name, style and description field.
+- The search is limited on a text search based on exact name, style that may be present on name, style and description field.
 
 ## Enhancements
 
